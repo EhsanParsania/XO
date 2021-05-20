@@ -1,4 +1,4 @@
-XO project with Vanilla JS \n
-how you can run this:
-npm i browser-sync
+🆇🅾 Project With 🆅🅰🅽🅸🅻🅰  🅹🆂<br>
+how you can run this :<br>
+npm i browser-sync<br>
 browser-sync -w index.html    (in its folder)
