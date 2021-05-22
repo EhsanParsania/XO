@@ -29,7 +29,7 @@ const turn = function (element) {
 
 
 
-
+// find out what tile is fill
 const fillTile = function (element) {
   if (counter < 9) {
     if (!element.classList.contains("fill")) {
@@ -46,7 +46,7 @@ const fillTile = function (element) {
   }
 };
 
-
+// check for winner :
 const checkGameWinner = function () {
   const winningIndexes = [
     [0, 1, 2],
@@ -69,6 +69,7 @@ const checkGameWinner = function () {
   }
 };
 
+// restart game function : 
 const restart = function () {
   let tiles = document.querySelectorAll(".tile");
   counter = 0;
