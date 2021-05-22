@@ -3,9 +3,14 @@ body {
   min-height: 300px;
   min-width: 300px;
 }
+@mixin center-position{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 body {
-  background-color: #b4b4b4;
+  background-color: rgb(180, 180, 180);
   min-height: 300px;
 }
 
@@ -19,26 +24,31 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 20px 10px rgba(87, 87, 87, 0.5);
-  background-color: #888888;
+  background-color: rgb(136, 136, 136);
   border-radius: 30px;
+
+  .tile {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 100px;
+    min-height: 100px;
+    width: calc(100%/3);
+    height: calc(100%/3);
+    float: left;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 30px;
+    background-color: white;
+
+    &:hover {
+      background-color: rgb(218, 218, 218);
+
+    }
+  }
+
 }
 
-.board .tile {
-  position: relative;
-  box-sizing: border-box;
-  min-width: 100px;
-  min-height: 100px;
-  width: calc(100%/3);
-  height: calc(100%/3);
-  float: left;
-  border: 1px solid black;
-  border-radius: 30px;
-  background-color: white;
-}
 
-.board .tile:hover {
-  background-color: #dadada;
-}
+
 
 .fill-o::before {
   content: '';
@@ -65,7 +75,7 @@ body {
   top: 42%;
   left: 7%;
   border-radius: 2vmin;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
 
 .fill-x::after {
@@ -84,7 +94,7 @@ body {
   height: 12vmin;
   color: white;
   font-size: 10vmin;
-  background-color: rgba(50, 50, 50, 0.9);
+  background-color: rgba(50, 50, 50, .9);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -124,6 +134,7 @@ body {
 
 .board.line2::before {
   top: 50%;
+
 }
 
 .board.line3::before {
@@ -156,4 +167,3 @@ body {
   top: 48.5%;
   transform: rotate(-45deg);
 }
-/*# sourceMappingURL=style.css.map */
