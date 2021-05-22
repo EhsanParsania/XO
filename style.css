@@ -4,8 +4,7 @@ html,body{
 }
 body{
     background-color: rgb(180, 180, 180);
-    min-height: 300px;
-    
+    min-height: 300px;  
 }
 
 .board{
@@ -20,8 +19,6 @@ body{
     box-shadow: 0 0 20px 10px rgba(87, 87, 87, 0.5);
     background-color: rgb(136, 136, 136);
     border-radius: 30px;
-
-
 }
 
 .tile{
@@ -92,7 +89,6 @@ body{
     border-radius: 4vmin;
     z-index: 2;
     white-space: nowrap;
-
 }
 
 .board.game-over.win-o::after{
