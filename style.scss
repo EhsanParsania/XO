@@ -3,7 +3,8 @@ body {
   min-height: 300px;
   min-width: 300px;
 }
-@mixin center-position{
+
+@mixin center-position {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -15,14 +16,12 @@ body {
 }
 
 .board {
+  @include center-position();
   min-width: 300px;
   min-height: 300px;
   width: 70vmin;
   height: 70vmin;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   box-shadow: 0 0 20px 10px rgba(87, 87, 87, 0.5);
   background-color: rgb(136, 136, 136);
   border-radius: 30px;
@@ -51,15 +50,13 @@ body {
 
 
 .fill-o::before {
+  @include center-position();
   content: '';
   position: absolute;
   min-width: 50px;
   min-height: 50px;
   width: 10vmin;
   height: 10vmin;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: 3.8vmin solid red;
   border-radius: 50%;
 }
@@ -87,6 +84,7 @@ body {
 }
 
 .board.game-over::after {
+  @include center-position();
   position: absolute;
   text-align: center;
   content: '';
@@ -95,9 +93,6 @@ body {
   color: white;
   font-size: 10vmin;
   background-color: rgba(50, 50, 50, .9);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   padding: 2vmin;
   border-radius: 4vmin;
   z-index: 2;
